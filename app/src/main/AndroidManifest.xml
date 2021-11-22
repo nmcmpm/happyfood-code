@@ -13,11 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DuAn"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
+
         <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true">
@@ -32,42 +35,34 @@
         </activity>
         <activity
             android:name=".LoginFb"
-            android:exported="true" >
-
-
-        </activity>
-        <!-- POST -->
+            android:exported="true"></activity> <!-- POST -->
         <activity
             android:name=".Post"
             android:allowEmbedded="true"
             android:exported="true"
             android:label="@string/Post"
-            android:theme="@style/Theme.Design.NoActionBar"></activity> <!-- TRANG_CHU -->
+            android:theme="@style/Theme.Design.NoActionBar" /> <!-- TRANG_CHU -->
         <!-- MENU -->
         <activity
             android:name=".Menu"
             android:allowEmbedded="true"
             android:exported="true"
-            android:label="@string/Post">
-
-        </activity> <!-- SIGN_UP -->
+            android:label="@string/Post"></activity> <!-- SIGN_UP -->
         <activity
             android:name=".SignUp"
-            android:exported="true"></activity> <!-- LOGIN -->
+            android:exported="true" /> <!-- LOGIN -->
         <activity
             android:name=".Login"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity> <!-- MAIN -->
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
 
         <uses-library
             android:name="org.apache.http.legacy"
