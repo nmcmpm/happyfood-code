@@ -17,7 +17,7 @@ public class Food {
         this.stt = stt;
     }
     
-    public Food() {
+    public Food(String owner, String food, String description, boolean b, String id) {
 
     }
 
@@ -69,6 +69,15 @@ public class Food {
         this.like = like;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Food{" +
+                "tenNH='" + tenNH + '\'' +
+                ", tenMon='" + tenMon + '\'' +
+                ", diaChi='" + diaChi + '\'' +
+                ", noiDung='" + noiDung + '\'' +
+                ", like=" + like +
+                ", stt=" + stt +
+                '}';
+    }
 }

@@ -22,16 +22,15 @@ public class FoodAdapter extends ArrayAdapter<Food> {
     int resource;
     List<Food> objects;
     int i = 0;
-    public FoodAdapter(@NonNull Activity context, int resource, @NonNull List<Food> objects) {
+    public FoodAdapter(Activity context, int resource, List<Food> objects) {
         super(context, resource, objects);
         this.context = context;
         this.resource = resource;
         this.objects = objects;
     }
 
-    @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = this.context.getLayoutInflater();
         View row =  inflater.inflate(this.resource,null);
 
@@ -48,9 +47,33 @@ public class FoodAdapter extends ArrayAdapter<Food> {
         txtDanhGia.setText(food.getNoiDung());
         txtDiaChi.setText(food.getDiaChi());
         txtMon.setText(food.getTenMon());
-        txtSTT.setText(position);
+        txtSTT.setText(""+food.getStt());
         txtQuan.setText(food.getTenNH());
 
+        if (food.isLike()){
+            imgLike.setVisibility(View.INVISIBLE);
+            imgDislike.setVisibility(View.VISIBLE);
+        }
+        imgLike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                xuLyThich(food);
+            }
+        });
+        imgDislike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                xuLyKhongThich(food);
+            }
+        });
         return row;
+    }
+
+    private void xuLyKhongThich(Food food) {
+        food.setLike(false);
+    }
+
+    private void xuLyThich(Food food) {
+        food.setLike(true);
     }
 }

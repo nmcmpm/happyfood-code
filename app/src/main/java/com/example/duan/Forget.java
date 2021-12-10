@@ -1,8 +1,5 @@
 package com.example.duan;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,27 +8,24 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.button.MaterialButtonToggleGroup;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
-public class Login extends AppCompatActivity {
-
-
-    TextView txtForgetPassword;
-    TextInputEditText txtUsername,txtPassword;
-    Button btnLogin,btnSignup,btnLight,btnDefault,btnDark,btnLoginSM;
+public class Forget extends AppCompatActivity {
+    TextInputEditText txtUsername, txtEmail;
+    Button btnRemember, btnDark, btnLight, btnDefault;
     ProgressBar prBar;
 
-    MaterialButtonToggleGroup btg_theme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_forget);
         addControl();
         addEven();
 
@@ -39,37 +33,17 @@ public class Login extends AppCompatActivity {
 
     private void addControl() {
         txtUsername = (TextInputEditText) findViewById(R.id.txtUsername);
-        txtPassword = (TextInputEditText) findViewById(R.id.txtPassword);
-        btnLogin = (Button) findViewById(R.id.btnLogin);
-        btnSignup = (Button) findViewById(R.id.btnSignup);
+        txtEmail = (TextInputEditText) findViewById(R.id.txtEmail);
+        btnRemember = (Button) findViewById(R.id.btnRemember);
         prBar = (ProgressBar) findViewById(R.id.prBar);
-        btg_theme = (MaterialButtonToggleGroup) findViewById(R.id.btg_theme);
         btnDark = (Button) findViewById(R.id.btnDark);
         btnLight = (Button) findViewById(R.id.btnLight);
         btnDefault = (Button) findViewById(R.id.btnDefault);
-        btnLoginSM = findViewById(R.id.btnLoginSM);
-        txtForgetPassword = findViewById(R.id.txtForget);
     }
 
     private void addEven() {
 
-        txtForgetPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Forget.class);
-                startActivity(intent);
-                finish();
-            }
-        });
 
-        btnLoginSM.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),LoginFb.class);
-                startActivity(intent);
-                finish();
-            }
-        });
         btnDefault.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,26 +63,17 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        btnSignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),SignUp.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        btnRemember.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String fullname,username,password,email;
+                String username, email;
 
                 username = String.valueOf(txtUsername.getText());
-                password = String.valueOf(txtPassword.getText());
+                email = String.valueOf(txtEmail.getText());
 
 
-                if(!username.equals("") && !password.equals("")) {
+                if(!username.equals("") && !email.equals("")) {
                     //Start ProgressBar first (Set visibility VISIBLE)
                     prBar.setVisibility(View.VISIBLE);
                     Handler handler = new Handler(Looper.getMainLooper());
@@ -119,23 +84,23 @@ public class Login extends AppCompatActivity {
                             //Creating array for parameters
                             String[] field = new String[2];
                             field[0] = "username";
-                            field[1] = "password";
+                            field[1] = "email";
                             //Creating array for data
                             String[] data = new String[2];
                             data[0] = username;
-                            data[1] = password;
+                            data[1] = email;
 
-                            PutData putData = new PutData("http://192.168.1.10/postPhp/login.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.1.10/postPhp/forget.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
 
                                     prBar.setVisibility(View.GONE);
                                     String result = putData.getResult();
 
-                                    if(result.equals("Login Success"))
+                                    if(result.equals("Forget Success"))
                                     {
                                         Toast.makeText(getApplicationContext(),result,Toast.LENGTH_LONG).show();
-                                        Intent intent = new Intent(getApplicationContext(),Menu.class);
+                                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                                         startActivity(intent);
                                         finish();
                                     }
@@ -153,11 +118,10 @@ public class Login extends AppCompatActivity {
                     });
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"All Flied required",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"All Field required",Toast.LENGTH_LONG).show();
                 }
             }
         });
-
 
     }
 }

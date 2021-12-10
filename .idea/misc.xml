@@ -21,6 +21,8 @@
         <entry key="app/src/main/res/drawable/ic_name.xml" value="0.284375" />
         <entry key="app/src/main/res/drawable/ic_password.xml" value="0.284375" />
         <entry key="app/src/main/res/drawable/ic_user.xml" value="0.284375" />
+        <entry key="app/src/main/res/layout/activity_change_password.xml" value="0.2848731884057971" />
+        <entry key="app/src/main/res/layout/activity_forget.xml" value="0.1734375" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_login_fb.xml" value="0.47890625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15833333333333333" />

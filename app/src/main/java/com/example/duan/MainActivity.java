@@ -14,7 +14,9 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URI;
+import java.net.URL;
 import java.util.ArrayList;
 
 import android.os.Bundle;
@@ -27,11 +29,13 @@ import com.example.duan.adapter.FoodAdapter;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    ListView listView;
+
     ListView lvBai;
     FoodAdapter adapterBai;
     ArrayList<Food> dsBai;
     TabHost tabHost;
-
     ListView lvBaiYeuThich;
     FoodAdapter adapterBaiYeuThich;
     ArrayList<Food> dsBaiYeuThich;
@@ -40,104 +44,135 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        dsBai = new ArrayList<>();
-
 
         addControls();
         addEvens();
-        new Connection().execute();
-
 
     }
 
     private void addEvens() {
+        tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String tabId) {
+                if(tabId.equalsIgnoreCase("tab2")){
+                    xuLyHienThiMonYeuThich();
+                }
+                else if(tabId.equalsIgnoreCase("tab1")){
+                    xuLyHienThiMon();
+                }
+            }
+        });
 
+    }
+
+    private void xuLyHienThiMon() {
+
+    }
+
+    private void xuLyHienThiMonYeuThich() {
+
+        dsBaiYeuThich.clear();
+
+        for (Food e:dsBai) {
+            if (e.isLike()){
+                dsBaiYeuThich.add(e);
+            }
+        }
+        adapterBaiYeuThich.notifyDataSetChanged();
     }
 
     private void addControls() {
 
+
+
         tabHost = findViewById(R.id.tabHost);
-        TabHost.TabSpec tab1 = tabHost.newTabSpec("t1");
+        tabHost.setup();
+
+        TabHost.TabSpec tab1 = tabHost.newTabSpec("tab1");
         tab1.setContent(R.id.tab1);
         tab1.setIndicator("",getResources().getDrawable(R.drawable.ic_home));
         tabHost.addTab(tab1);
 
-        TabHost.TabSpec tab2 = tabHost.newTabSpec("t2");
+        TabHost.TabSpec tab2 = tabHost.newTabSpec("tab2");
         tab2.setContent(R.id.tab2);
         tab2.setIndicator("",getResources().getDrawable(R.drawable.ic_favorite));
         tabHost.addTab(tab2);
 
-
         lvBai = findViewById(R.id.lvBai);
-        adapterBai = new FoodAdapter(MainActivity.this,R.layout.item,dsBai);
+        dsBai = new ArrayList<>();
+        adapterBai = new FoodAdapter(this,R.layout.item,dsBai);
         lvBai.setAdapter(adapterBai);
 
         lvBaiYeuThich = findViewById(R.id.lvBaiYeuThich);
         dsBaiYeuThich = new ArrayList<>();
-        adapterBaiYeuThich = new FoodAdapter(MainActivity.this,R.layout.item,dsBaiYeuThich);
+        adapterBaiYeuThich = new FoodAdapter(this,R.layout.item,dsBaiYeuThich);
         lvBaiYeuThich.setAdapter(adapterBaiYeuThich);
 
+        getJSON("http://192.168.1.10/createapost/data.php");
+
     }
 
-    class Connection extends AsyncTask<String, String, String> {
-        @Override
-        protected String doInBackground(String... params) {
-            String result="";
-            String host= "http://localhost/postPhp/getdata.php";
-            try{
-                HttpClient client = new DefaultHttpClient();
-                HttpGet request = new HttpGet();
-                request.setURI(new URI(host));
-                HttpResponse response= client.execute(request);
-                BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-                StringBuffer stringBuffer= new StringBuffer("");
-                String line="";
-                while((line=reader.readLine())!=null){
-                    stringBuffer.append(line);
-                    break;
+
+    private void getJSON(final String urlWebService) {
+
+        class GetJSON extends AsyncTask<Void, Void, String> {
+
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+            }
+
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT).show();
+                try {
+                    loadIntoListView(s);
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
-                reader.close();
-                result=stringBuffer.toString();
-
-            }
-            catch (Exception e){
-                return new String("There exception: "+e.getMessage());
             }
 
-
-            return result;
-        }
-        @Override
-        protected void onPostExecute(String result){
-            try {
-
-                JSONObject jsonResult= new JSONObject(result);
-                int success =jsonResult.getInt("success");
-                if(success==1){
-                    //Toast.makeText(getApplicationContext(),"Oke, there are result",Toast.LENGTH_SHORT).show();
-                    JSONArray cars = jsonResult.getJSONArray("cars");
-                    for(int i=0;i<cars.length();i++){
-                        JSONObject car= cars.getJSONObject(i);
-                        int id = car.getInt("id");
-                        String food = car.getString("food");
-                        String address = car.getString("address");
-                        String description = car.getString("description");
-                        String username= car.getString("owner");
-                        dsBai.add(new Food(username,food,address,description,false,id));
+            @Override
+            protected String doInBackground(Void... voids) {
+                try {
+                    URL url = new URL(urlWebService);
+                    HttpURLConnection con = (HttpURLConnection) url.openConnection();
+                    StringBuilder sb = new StringBuilder();
+                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
+                    String json;
+                    while ((json = bufferedReader.readLine()) != null) {
+                        sb.append(json + "\n");
                     }
-                    adapterBai.notifyDataSetChanged();
+                    return sb.toString().trim();
+                } catch (Exception e) {
+                    return null;
                 }
-                else {
-                    Toast.makeText(getApplicationContext(),"No cars yet",Toast.LENGTH_SHORT).show();
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-                System.out.println(e.getMessage());
             }
         }
+        GetJSON getJSON = new GetJSON();
+        getJSON.execute();
     }
 
+    private void loadIntoListView(String json) throws JSONException {
+        JSONArray jsonArray = new JSONArray(json);
+        for (int i = 0; i < jsonArray.length(); i++) {
+            JSONObject obj = jsonArray.getJSONObject(i);
+            String owner = obj.getString("owner");
+            String food = obj.getString("food");
+            String description = obj.getString("description");
+            String id = obj.getString("id");
+            String address = obj.getString("address");
 
+            dsBai.add(new Food(owner,food,address,description,false, Integer.parseInt(id)));
+        }
+
+
+        for (Food e:dsBai) {
+            System.out.println(e.toString());
+        }
+        adapterBai.notifyDataSetChanged();
+    }
 }
-
 

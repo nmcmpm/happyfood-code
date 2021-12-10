@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
@@ -86,21 +87,21 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/imgLike"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="7dp"
                             android:layout_weight="1"
-                            app:srcCompat="@drawable/ic_like" />
+                            app:srcCompat="@drawable/ic_like"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/imgDislike"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="20dp"
                             android:layout_weight="1"
-                            app:srcCompat="@drawable/ic_dislike" />
+                            app:srcCompat="@drawable/ic_dislike"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
                     </LinearLayout>
 

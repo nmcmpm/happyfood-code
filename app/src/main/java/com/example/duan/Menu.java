@@ -11,7 +11,7 @@ package com.example.duan;
 public class Menu extends AppCompatActivity {
 
 
-    private ImageButton btnOut,btnHome,btnPost;
+    private ImageButton btnOut,btnHome,btnPost,btnChangePassword,btnAboutUs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +49,23 @@ public class Menu extends AppCompatActivity {
                 finish();
             }
         });
+        btnChangePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),ChangePassword.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        btnAboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),AboutUs.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
 
@@ -57,5 +74,7 @@ public class Menu extends AppCompatActivity {
         btnHome = findViewById(R.id.btnHome);
         btnOut = findViewById(R.id.btnOut);
         btnPost = findViewById(R.id.btnPost);
+        btnChangePassword = findViewById(R.id.btnChange);
+        btnAboutUs= findViewById(R.id.btnAboutUs);
     }
 }

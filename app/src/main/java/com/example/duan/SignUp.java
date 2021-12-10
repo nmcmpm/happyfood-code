@@ -81,7 +81,7 @@ public class SignUp extends AppCompatActivity {
                             data[2] = username;
                             data[3] = password;
 
-                            PutData putData = new PutData("http://192.168.1.8/postPhp/signup.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.1.10/postPhp/signup.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
 

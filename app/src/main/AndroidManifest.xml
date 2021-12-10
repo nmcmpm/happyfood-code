@@ -14,6 +14,15 @@
         android:theme="@style/Theme.DuAn"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".AboutUs"
+            android:exported="true" />
+        <activity
+            android:name=".Forget"
+            android:exported="true" />
+        <activity
+            android:name=".ChangePassword"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity2"
             android:exported="true" />
 
@@ -35,7 +44,7 @@
         </activity>
         <activity
             android:name=".LoginFb"
-            android:exported="true"></activity> <!-- POST -->
+            android:exported="true" /> <!-- POST -->
         <activity
             android:name=".Post"
             android:allowEmbedded="true"
@@ -47,7 +56,7 @@
             android:name=".Menu"
             android:allowEmbedded="true"
             android:exported="true"
-            android:label="@string/Post"></activity> <!-- SIGN_UP -->
+            android:label="@string/Post" /> <!-- SIGN_UP -->
         <activity
             android:name=".SignUp"
             android:exported="true" /> <!-- LOGIN -->
