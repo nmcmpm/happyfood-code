@@ -97,7 +97,7 @@ public class ChangePassword extends AppCompatActivity {
                             data[1] = password;
                             data[2] = newPassword;
 
-                            PutData putData = new PutData("http://192.168.1.10/postPhp/change.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.1.11/postPhp/change.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
 

@@ -82,6 +82,7 @@ public class Login extends AppCompatActivity {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             }
         });
+
         btnLight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,7 +111,7 @@ public class Login extends AppCompatActivity {
 
                 if(!username.equals("") && !password.equals("")) {
                     //Start ProgressBar first (Set visibility VISIBLE)
-                    prBar.setVisibility(View.VISIBLE);
+//                    prBar.setVisibility(View.VISIBLE);
                     Handler handler = new Handler(Looper.getMainLooper());
                     handler.post(new Runnable() {
                         @Override
@@ -125,11 +126,11 @@ public class Login extends AppCompatActivity {
                             data[0] = username;
                             data[1] = password;
 
-                            PutData putData = new PutData("http://192.168.1.10/postPhp/login.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.1.11/postPhp/login.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
 
-                                    prBar.setVisibility(View.GONE);
+//                                    prBar.setVisibility(View.GONE);
                                     String result = putData.getResult();
 
                                     if(result.equals("Login Success"))

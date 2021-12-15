@@ -90,7 +90,7 @@ public class Forget extends AppCompatActivity {
                             data[0] = username;
                             data[1] = email;
 
-                            PutData putData = new PutData("http://192.168.1.10/postPhp/forget.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.1.11/postPhp/forget.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
 

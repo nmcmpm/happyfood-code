@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name = "colorAccent">#4CAF50</color>
     <color name="logout">#D81506</color>
-
+    <color name="colorPrimary">#fd0686</color>
+    <color name="colorPrimaryDark">#fd0686</color>
 </resources>

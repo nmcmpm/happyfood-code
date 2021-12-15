@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context=".MainActivity">
 
     <TabHost
@@ -36,6 +37,8 @@
                     <ListView
 
                         android:id="@+id/lvBai"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
                 </LinearLayout>
@@ -48,6 +51,8 @@
 
                     <ListView
                         android:id="@+id/lvBaiYeuThich"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
                 </LinearLayout>

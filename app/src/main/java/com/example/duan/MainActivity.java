@@ -1,6 +1,8 @@
 package com.example.duan;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.AsyncTask;
 
 
@@ -20,6 +22,8 @@ import java.net.URL;
 import java.util.ArrayList;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TabHost;
@@ -30,7 +34,6 @@ import com.example.duan.adapter.FoodAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView listView;
 
     ListView lvBai;
     FoodAdapter adapterBai;
@@ -39,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     ListView lvBaiYeuThich;
     FoodAdapter adapterBaiYeuThich;
     ArrayList<Food> dsBaiYeuThich;
+
+    int[] img = {R.drawable.img1,R.drawable.img2,R.drawable.img3,R.drawable.img4,R.drawable.img5};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +67,25 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+//        lvBai.setClickable(true);
+        lvBai.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this,
+                        "Item in position " + position + " clicked", Toast.LENGTH_LONG).show();
+                Intent i = new Intent(MainActivity.this,MainActivity2.class);
+                i.putExtra("Mon", dsBai.get(position).getTenMon());
+                i.putExtra("DC", dsBai.get(position).getDiaChi());
+                i.putExtra("ND", dsBai.get(position).getNoiDung());
+                i.putExtra("STT", dsBai.get(position).getStt());
+                i.putExtra("NH", dsBai.get(position).getTenNH());
+                i.putExtra("IMG",img[position%5]);
+                startActivity(i);
+            }
+        });
+//
+
 
     }
 
@@ -108,7 +132,9 @@ public class MainActivity extends AppCompatActivity {
         adapterBaiYeuThich = new FoodAdapter(this,R.layout.item,dsBaiYeuThich);
         lvBaiYeuThich.setAdapter(adapterBaiYeuThich);
 
-        getJSON("http://192.168.1.10/createapost/data.php");
+
+
+        getJSON("http://192.168.1.11/postPhp/getdata.php");
 
     }
 
@@ -164,7 +190,6 @@ public class MainActivity extends AppCompatActivity {
             String description = obj.getString("description");
             String id = obj.getString("id");
             String address = obj.getString("address");
-
             dsBai.add(new Food(owner,food,address,description,false, Integer.parseInt(id)));
         }
 
@@ -173,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
             System.out.println(e.toString());
         }
         adapterBai.notifyDataSetChanged();
+
     }
 }
 
