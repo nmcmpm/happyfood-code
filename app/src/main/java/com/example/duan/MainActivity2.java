@@ -46,11 +46,7 @@ public class MainActivity2 extends AppCompatActivity {
             txtND.setText(ND);
             txtMon.setText(Mon);
             img.setImageResource(imageid);
-            startActivity(intent);
         }
-
-
-
 
     }
 }

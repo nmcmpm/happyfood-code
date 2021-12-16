@@ -18,7 +18,7 @@
 
     <string name="facebook_app_id">398624008412381</string>
     <string name="fb_login_protocol_scheme">fb398624008412381</string>
-    <string name="change_password">Change Password</string>
+    <string name="change_password">Change</string>
     <string name="new_password_confirm">New Password confirm</string>
     <string name="new_passwrod">New Password</string>
     <string name="forget_password">Forget Password</string>

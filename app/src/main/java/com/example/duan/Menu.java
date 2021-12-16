@@ -28,10 +28,8 @@ public class Menu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),Post.class);
                 startActivity(intent);
-                finish();
             }
         });
-
         btnOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,13 +38,11 @@ public class Menu extends AppCompatActivity {
                 finish();
             }
         });
-
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
         btnChangePassword.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +50,6 @@ public class Menu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),ChangePassword.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -63,7 +58,6 @@ public class Menu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),AboutUs.class);
                 startActivity(intent);
-                finish();
             }
         });
     }

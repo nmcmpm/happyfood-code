@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/register"
     tools:context=".SignUp">
 
     <com.google.android.material.button.MaterialButtonToggleGroup
@@ -22,7 +23,11 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Default" />
+            android:text="Default"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            />
 
         <Button
             android:id="@+id/btnLight"
@@ -30,7 +35,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Light"
-
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/white"
+            android:textSize="16dp"
             />
 
         <Button
@@ -38,24 +45,27 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dark" />
+            android:text="Dark"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
 
     <TextView
-        android:drawableLeft="@mipmap/ic_happyfood"
-        android:drawableRight="@mipmap/ic_happyfood"
+
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:fontFamily="sans-serif"
-        android:gravity="center"
+        android:layout_marginTop="120dp"
+        android:paddingLeft="100px"
         android:rotationX="7"
         android:text="@string/sign_up"
-        android:textSize="50dp"
+        android:textSize="40dp"
         android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,13 +86,13 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtFullname"
+            android:drawableRight="@drawable/ic_fullname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableRight="@drawable/ic_fullname"
+            android:background="@drawable/dialog_bg"
             android:fontFamily="sans-serif"
-            android:padding="12dp"
+            tools:ignore="TouchTargetSizeCheck"
             />
-
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -101,11 +111,13 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtEmail"
+            android:drawableRight="@drawable/ic_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableRight="@drawable/ic_email"
+            android:background="@drawable/dialog_bg"
             android:fontFamily="sans-serif"
-            android:padding="12dp" />
+            tools:ignore="TouchTargetSizeCheck"
+            />
 
 
 
@@ -126,11 +138,12 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtUsername"
+            android:drawableRight="@drawable/ic_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableRight="@drawable/ic_user"
+            android:background="@drawable/dialog_bg"
             android:fontFamily="sans-serif"
-            android:padding="12dp"
+            tools:ignore="TouchTargetSizeCheck"
             />
 
 
@@ -148,56 +161,35 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtPassword"
+            android:drawableRight="@drawable/ic_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableRight="@drawable/ic_password"
+            android:background="@drawable/dialog_bg"
             android:fontFamily="sans-serif"
-            android:padding="12dp"
+            tools:ignore="TouchTargetSizeCheck"
+            android:password="true"
+
             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="120dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
 
-        <ProgressBar
-            android:id="@+id/prBar"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:progress="25"
-            android:visibility="gone"
-            />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            >
 
             <Button
                 android:id="@+id/btnSignup"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
-                android:fontFamily="sans-serif"
-                android:text="@string/sign_up"
-                android:textSize="15dp"
-                android:textStyle="bold"
                 android:background="@drawable/custom_button"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/purple_200"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="150sp"
+                android:text="Register"
                 />
-        </TableRow>
-    </TableLayout>
+
 
 
     <TextView
@@ -206,6 +198,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
+        android:textSize="18dp"
         android:text="@string/login_here"></TextView>
 
 

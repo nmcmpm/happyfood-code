@@ -93,7 +93,6 @@ public class SignUp extends AppCompatActivity {
                                         Toast.makeText(getApplicationContext(),result,Toast.LENGTH_LONG).show();
                                         Intent intent = new Intent(getApplicationContext(),Login.class);
                                         startActivity(intent);
-                                        finish();
                                     }
                                     else
                                     {

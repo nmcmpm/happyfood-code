@@ -35,7 +35,6 @@ public class LoginFb extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(),Menu.class);
                 startActivity(intent);
-                finish();
             }
 
             @Override

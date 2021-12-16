@@ -109,7 +109,6 @@ public class ChangePassword extends AppCompatActivity {
                                         Toast.makeText(getApplicationContext(),result,Toast.LENGTH_LONG).show();
                                         Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                                         startActivity(intent);
-                                        finish();
                                     }
                                     else
                                     {

@@ -58,7 +58,6 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),Forget.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -67,7 +66,6 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),LoginFb.class);
                 startActivity(intent);
-                finish();
             }
         });
         btnDefault.setOnClickListener(new View.OnClickListener() {
