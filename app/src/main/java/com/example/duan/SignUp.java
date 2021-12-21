@@ -143,7 +143,6 @@ public class SignUp extends AppCompatActivity {
         txtPassword = (TextInputEditText) findViewById(R.id.txtPassword);
         btnSignup = (Button) findViewById(R.id.btnSignup);
         txtLogin = (TextView) findViewById(R.id.txtLogin);
-        prBar = (ProgressBar) findViewById(R.id.prBar);
         btnDark = (Button) findViewById(R.id.btnDark);
         btnLight = (Button) findViewById(R.id.btnLight);
         btnDefault = (Button) findViewById(R.id.btnDefault);

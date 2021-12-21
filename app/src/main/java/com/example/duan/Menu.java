@@ -52,11 +52,10 @@ public class Menu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         btnAboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),AboutUs.class);
+                Intent intent = new Intent(getApplicationContext(),about_us.class);
                 startActivity(intent);
             }
         });

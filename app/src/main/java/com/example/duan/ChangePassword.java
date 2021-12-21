@@ -40,11 +40,9 @@ public class ChangePassword extends AppCompatActivity {
         txtNewPassword = (TextInputEditText) findViewById(R.id.txtNewPassword);
         txtNewPasswordConfirm = (TextInputEditText) findViewById(R.id.txtNewPasswordConfirm);
         btnChange = (Button) findViewById(R.id.btnChange);
-        prBar = (ProgressBar) findViewById(R.id.prBar);
         btnDark = (Button) findViewById(R.id.btnDark);
         btnLight = (Button) findViewById(R.id.btnLight);
         btnDefault = (Button) findViewById(R.id.btnDefault);
-        prBar = (ProgressBar) findViewById(R.id.prBar);
     }
 
     private void addEven() {

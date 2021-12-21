@@ -89,26 +89,6 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-<!--                        <ImageButton-->
-<!--                            android:id="@+id/imgLike"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_weight="1"-->
-<!--                            android:focusable="false"-->
-<!--                            android:focusableInTouchMode="false"-->
-<!--                            app:srcCompat="@drawable/ic_like"-->
-<!--                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />-->
-
-<!--                        <ImageButton-->
-<!--                            android:id="@+id/imgDislike"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_weight="1"-->
-<!--                            android:focusable="false"-->
-<!--                            android:focusableInTouchMode="false"-->
-<!--                            app:srcCompat="@drawable/ic_dislike"-->
-<!--                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />-->
-
                     </LinearLayout>
 
                 </LinearLayout>

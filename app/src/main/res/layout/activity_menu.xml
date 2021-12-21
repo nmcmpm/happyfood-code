@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/login"
     tools:context=".Menu">
 
 
@@ -24,31 +25,30 @@
                 >
 
                 <TextView
+
                     android:layout_marginTop="50px"
                     android:id="@+id/temp1"
                     android:layout_width="500px"
                     android:layout_height="68dp"
-                    android:layout_gravity="center"
                     android:gravity="center"
                     android:text="Happy Food"
-                    android:textSize="70px"
+                    android:textSize="10.8pt"
+                    android:rotationX="7"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     android:fontFamily="@font/poppinsbold"/>
-
-                <TextView
-                    android:layout_marginTop="50px"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Starting a new food"
-                    android:fontFamily="@font/poppinsmedium"
-                    />
+                />
 
             </LinearLayout>
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="43pt"
+                android:layout_height="43pt"
+                android:layout_marginLeft="40pt"
                 android:src="@drawable/menulogo" />
         </LinearLayout>
 
@@ -59,61 +59,73 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="20pt"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/btnHome"
-                android:layout_width="300px"
-                android:layout_height="300px"
-                android:layout_margin="50px"
+                android:layout_width="129dp"
+                android:layout_height="132dp"
+                android:layout_marginLeft="130px"
+                android:layout_marginTop="50px"
+                android:autofillHints="Home"
+                android:background="@drawable/custom_item"
                 android:src="@drawable/ic_baseline_food_bank_24" />
 
 
             <ImageButton
                 android:id="@+id/btnPost"
-                android:layout_width="300px"
-                android:layout_height="300px"
-                android:layout_margin="50px"
-
+                android:layout_width="136dp"
+                android:layout_height="131dp"
+                android:layout_marginLeft="150px"
+                android:layout_marginTop="50px"
+                android:background="@drawable/custom_item"
                 android:src="@drawable/ic_baseline_add_circle_24" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40pt"
             android:orientation="horizontal">
+
 
             <ImageButton
                 android:id="@+id/btnChange"
-                android:layout_width="300px"
-                android:layout_height="300px"
-                android:layout_margin="50px"
-                android:src="@drawable/ic_baseline_food_bank_24" />
+                android:layout_width="133dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="130px"
+                android:layout_marginTop="50px"
+                android:background="@drawable/custom_item"
+                android:src="@drawable/ic_baseline_password_24" />
 
 
             <ImageButton
                 android:id="@+id/btnAboutUs"
-                android:layout_width="300px"
-                android:layout_height="300px"
-                android:layout_margin="50px"
-                android:src="@drawable/ic_baseline_add_circle_24" />
+                android:layout_width="136dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="150px"
+                android:layout_marginTop="50px"
+                android:background="@drawable/custom_item"
+                android:src="@drawable/ic_baseline_info_24" />
 
         </LinearLayout>
 
         <ImageButton
             android:id="@+id/btnOut"
+            android:layout_marginTop="38pt"
+            android:layout_marginLeft="70pt"
+            android:layout_width="40pt"
+            android:layout_height="40pt"
             android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="50px"
-            android:background="@color/logout"
-            android:src="@drawable/ic_baseline_disabled_by_default_24" />
+            android:background="@color/white"
+            android:src="@drawable/ic_logout" />
 
 
     </LinearLayout>

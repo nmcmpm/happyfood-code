@@ -35,7 +35,6 @@ public class Forget extends AppCompatActivity {
         txtUsername = (TextInputEditText) findViewById(R.id.txtUsername);
         txtEmail = (TextInputEditText) findViewById(R.id.txtEmail);
         btnRemember = (Button) findViewById(R.id.btnRemember);
-        prBar = (ProgressBar) findViewById(R.id.prBar);
         btnDark = (Button) findViewById(R.id.btnDark);
         btnLight = (Button) findViewById(R.id.btnLight);
         btnDefault = (Button) findViewById(R.id.btnDefault);

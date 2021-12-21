@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
+    android:background="@drawable/login"
     tools:context=".MainActivity">
 
     <TabHost
         android:id="@+id/tabHost"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TabWidget
@@ -35,12 +35,11 @@
                     android:orientation="vertical">
 
                     <ListView
-
                         android:id="@+id/lvBai"
-                        android:focusable="false"
-                        android:focusableInTouchMode="false"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -51,14 +50,19 @@
 
                     <ListView
                         android:id="@+id/lvBaiYeuThich"
-                        android:focusable="false"
-                        android:focusableInTouchMode="false"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
                 </LinearLayout>
+
             </FrameLayout>
+
         </LinearLayout>
+
+
     </TabHost>
+
 
 
 </LinearLayout>

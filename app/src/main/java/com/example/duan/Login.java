@@ -10,6 +10,7 @@ import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,7 +24,8 @@ public class Login extends AppCompatActivity {
 
     TextView txtForgetPassword;
     TextInputEditText txtUsername,txtPassword;
-    Button btnLogin,btnSignup,btnLight,btnDefault,btnDark,btnLoginSM;
+    Button btnLogin,btnSignup,btnLight,btnDefault,btnDark;
+    ImageButton btnLoginSM;
     ProgressBar prBar;
 
     MaterialButtonToggleGroup btg_theme;
@@ -42,7 +44,6 @@ public class Login extends AppCompatActivity {
         txtPassword = (TextInputEditText) findViewById(R.id.txtPassword);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnSignup = (Button) findViewById(R.id.btnSignup);
-        prBar = (ProgressBar) findViewById(R.id.prBar);
         btg_theme = (MaterialButtonToggleGroup) findViewById(R.id.btg_theme);
         btnDark = (Button) findViewById(R.id.btnDark);
         btnLight = (Button) findViewById(R.id.btnLight);
