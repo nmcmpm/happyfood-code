@@ -19,7 +19,7 @@ import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 public class ChangePassword extends AppCompatActivity {
     TextInputEditText txtUsername, txtPassword, txtNewPassword, txtNewPasswordConfirm;
-    Button btnChange, btnDark, btnLight, btnDefault;
+    Button btnChange, btnDark, btnLight, btnDefault,btnLogin;
     ProgressBar prBar;
 
 
@@ -40,6 +40,7 @@ public class ChangePassword extends AppCompatActivity {
         txtNewPassword = (TextInputEditText) findViewById(R.id.txtNewPassword);
         txtNewPasswordConfirm = (TextInputEditText) findViewById(R.id.txtNewPasswordConfirm);
         btnChange = (Button) findViewById(R.id.btnChange);
+        btnLogin = (Button) findViewById(R.id.btnLogin);
         btnDark = (Button) findViewById(R.id.btnDark);
         btnLight = (Button) findViewById(R.id.btnLight);
         btnDefault = (Button) findViewById(R.id.btnDefault);
@@ -124,6 +125,15 @@ public class ChangePassword extends AppCompatActivity {
                 else{
                     Toast.makeText(getApplicationContext(),"Pass wrong",Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Login.class);
+                startActivity(intent);
+                finish();
             }
         });
 

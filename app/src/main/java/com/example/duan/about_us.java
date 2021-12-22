@@ -32,29 +32,27 @@ public class about_us extends AppCompatActivity {
     private void addEvent() {
         img.setImageResource(R.drawable.lan);
         txtTen.setText("Đoàn Nguyễn Hương Lan");
-        txtLop.setText("19CLC6");
-        txtMon.setText("Nhập môn công nghệ phần mềm");
-        txtRole.setText("Leader");
+        txtLop.setText("Lớp : 19CLC6");
+        txtMon.setText("Môn : Nhập môn công nghệ phần mềm");
+        txtRole.setText("Vai trò : Leader");
 
         img1.setImageResource(R.drawable.anh);
         txtTen1.setText("Phạm Ngọc Anh");
-        txtLop1.setText("19CLC6");
-        txtMon1.setText("Nhập môn công nghệ phần mềm");
-        txtRole1.setText("Coder");
+        txtLop1.setText("Lớp : 19CLC6");
+        txtMon1.setText("Môn : Nhập môn công nghệ phần mềm");
+        txtRole1.setText("Vai trò : Coder");
 
         img2.setImageResource(R.drawable.son);
         txtTen2.setText("Nguyễn Sơn");
-        txtLop2.setText("19CLC6");
-        txtMon2.setText("Nhập môn công nghệ phần mềm");
-        txtRole2.setText("Coder");
+        txtLop2.setText("Lớp : 19CLC6");
+        txtMon2.setText("Môn : Nhập môn công nghệ phần mềm");
+        txtRole2.setText("Vai trò : Coder");
 
         img3.setImageResource(R.drawable.quang);
         txtTen3.setText("Hoàng Đức Quang");
-        txtLop3.setText("19CLC6");
-        txtMon3.setText("Nhập môn công nghệ phần mềm");
-        txtRole3.setText("Coder");
-
-
+        txtLop3.setText("Lớp : 19CLC6");
+        txtMon3.setText("Môn : Nhập môn công nghệ phần mềm");
+        txtRole3.setText("Vai trò : Coder");
 
 
     }

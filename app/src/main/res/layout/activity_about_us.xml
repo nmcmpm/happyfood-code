@@ -4,13 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login"
+    android:background="@drawable/register"
     android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="About Us"
+        android:rotationX="7"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
 
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="15pt"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
@@ -46,9 +59,8 @@
                     android:id="@+id/txtTen"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
                     android:textColor="@color/black"
-                    android:textSize="23dp"
+                    android:textSize="21dp"
                     android:fontFamily="@font/poppinsmedium"
                     ></TextView>
                 <TextView
@@ -69,7 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="7dp"
-                    android:textSize="15dp"
+                    android:textSize="13dp"
                     android:textColor="@color/black"/>
 
 
@@ -138,7 +150,6 @@
                     android:id="@+id/txtTen1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
                     android:fontFamily="@font/poppinsmedium"
                     android:textColor="@color/black"
                     android:textSize="23dp"></TextView>
@@ -231,7 +242,6 @@
                     android:id="@+id/txtTen2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
                     android:textColor="@color/black"
                     android:textSize="25dp"
                     android:fontFamily="@font/poppinsmedium"
@@ -254,7 +264,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="7dp"
-                    android:textSize="15dp"
+                    android:textSize="13dp"
                     android:textColor="@color/black"/>
 
 
@@ -324,7 +334,6 @@
                     android:id="@+id/txtTen3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
                     android:textColor="@color/black"
                     android:textSize="23dp"
                     android:fontFamily="@font/poppinsmedium"
@@ -347,7 +356,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="7dp"
-                    android:textSize="15dp"
+                    android:textSize="13dp"
                     android:textColor="@color/black"/>
 
 

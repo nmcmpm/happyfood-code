@@ -12,6 +12,7 @@
         <entry key="app/src/main/res/drawable/custom_button.xml" value="0.1814814814814815" />
         <entry key="app/src/main/res/drawable/custom_item.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/drawable/dialog_bg.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_address.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/drawable/ic_airline_seat_flat_angled_black_24dp.xml" value="0.13819444444444445" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.284375" />
         <entry key="app/src/main/res/drawable/ic_baseline_food_bank_24.xml" value="0.33541666666666664" />
@@ -41,7 +42,7 @@
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_mem.xml" value="0.228125" />
         <entry key="app/src/main/res/layout/activity_menu.xml" value="0.31927083333333334" />
-        <entry key="app/src/main/res/layout/activity_post.xml" value="0.31927083333333334" />
+        <entry key="app/src/main/res/layout/activity_post.xml" value="0.18023255813953487" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.29483695652173914" />
         <entry key="app/src/main/res/layout/activity_trang_chu.xml" value="0.16979166666666667" />
         <entry key="app/src/main/res/layout/custom_button.xml" value="0.31927083333333334" />
