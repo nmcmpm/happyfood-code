@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/phamt/Downloads/DuAn4-master/DuAn4-master/app/src/main/res/drawable/ic_name.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/phamt/Downloads/DuAn4-master/DuAn4-master/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/phamt/Downloads/DuAn4-master/DuAn4-master/app/src/main/res/layout/activity_post.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/bottom_nav_menu.xml" value="0.130859375" />
+        <entry key="app/src/main/res/drawable/btn_rounded.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/custom_button.xml" value="0.1814814814814815" />
+        <entry key="app/src/main/res/drawable/custom_item.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/dialog_bg.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_address.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_airline_seat_flat_angled_black_24dp.xml" value="0.13819444444444445" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.284375" />
+        <entry key="app/src/main/res/drawable/ic_baseline_food_bank_24.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_baseline_password_24.xml" value="0.2515625" />
+        <entry key="app/src/main/res/drawable/ic_dislike.xml" value="0.2515625" />
+        <entry key="app/src/main/res/drawable/ic_email.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_favorite.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_favorite_background.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_favorite_foreground.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_fullname.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_home_foreground.xml" value="0.13819444444444445" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_like.xml" value="0.284375" />
+        <entry key="app/src/main/res/drawable/ic_logout.xml" value="0.2515625" />
+        <entry key="app/src/main/res/drawable/ic_name.xml" value="0.284375" />
+        <entry key="app/src/main/res/drawable/ic_password.xml" value="0.284375" />
+        <entry key="app/src/main/res/drawable/ic_user.xml" value="0.284375" />
+        <entry key="app/src/main/res/drawable/rectanglebg.xml" value="0.2515625" />
+        <entry key="app/src/main/res/layout/activity_about_us.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_change_password.xml" value="0.2848731884057971" />
+        <entry key="app/src/main/res/layout/activity_forget.xml" value="0.1734375" />
+        <entry key="app/src/main/res/layout/activity_get_start.xml" value="0.30416666666666664" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_login_fb.xml" value="0.47890625" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_mem.xml" value="0.228125" />
+        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.31927083333333334" />
+        <entry key="app/src/main/res/layout/activity_post.xml" value="0.18023255813953487" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.29483695652173914" />
+        <entry key="app/src/main/res/layout/activity_trang_chu.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/custom_button.xml" value="0.31927083333333334" />
+        <entry key="app/src/main/res/layout/custom_grid_layout.xml" value="0.130078125" />
+        <entry key="app/src/main/res/layout/custom_text.xml" value="0.28125" />
+        <entry key="app/src/main/res/layout/item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_member.xml" value="0.239453125" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.45555555555555555" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.239453125" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_favorite.xml" value="0.18958333333333333" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_favorite_round.xml" value="0.18958333333333333" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.33541666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

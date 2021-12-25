@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="100px"
+        android:rotationX="7"
+        android:text="Review Post"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="40pt"
+        android:layout_marginLeft="10pt"
+        android:layout_marginRight="10pt"
+
+        >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgDetail"
+            android:layout_width="500px"
+            android:layout_height="500px"
+            android:outlineProvider="none"
+            android:layout_margin="2pt"
+            android:padding="5pt"
+            android:scaleType="centerInside"
+            android:background="@drawable/rectanglebg"
+            android:src="@drawable/img1" />
+
+        <LinearLayout
+            android:layout_width="244dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtMonDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/poppins_medium"
+                android:lineSpacingExtra="14sp"
+                android:text="Popular Rave Parties"
+                android:textColor="@color/purple_200"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtQuanDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:lineSpacingExtra="14sp"
+                android:text="Quan"
+                android:textColor="@color/purple_200"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtDiachiaDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:lineSpacingExtra="14sp"
+                android:text="Dia Chi"
+                android:textColor="@color/purple_200"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtpriceDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins_regular"
+                android:lineSpacingExtra="5sp"
+                android:text="Gia"
+                android:textColor="@color/purple_200"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2pt"
+            android:layout_margin="3pt"
+            android:background="@color/purple_200" />
+
+        <TextView
+            android:id="@+id/txtDescriptionDetai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="22dp"
+            android:fontFamily="@font/poppins_regular"
+            android:lineSpacingExtra="5sp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor sed do eiusmod tempor aliquip ex ea. Lorem ipsum dds olor sit amet, consectetur adipiscing elit, sed do eiusmod tempor sed do eiusmod tempor aliquip ex ea.  Lorem ipsum dds olor sit amet, consdafas ectetur adipiscing elit, Lorem ipsum dds olor sit amet, consectetur adipiscing elit,"
+            android:textColor="@color/purple_200"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2pt"
+            android:layout_margin="3pt"
+            android:background="@color/purple_200" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/imglike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:focusable="false"
+            android:padding="30px"
+            android:focusableInTouchMode="false"
+            app:srcCompat="@drawable/ic_like"
+            />
+        <ImageButton
+            android:id="@+id/imgdislike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="30px"
+            android:layout_marginLeft="30px"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:srcCompat="@drawable/ic_dislike"
+            />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
