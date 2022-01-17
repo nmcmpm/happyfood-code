@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        getJSON("http://192.168.1.11/postPhp/getdata.php");
+        getJSON("http://192.168.1.13/postPhp/getdata.php");
 
     }
 

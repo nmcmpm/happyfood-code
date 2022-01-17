@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DuAn</string>
+    <string name="app_name">Happy Food</string>
     <string name="password">Password</string>
     <string name="username">Username</string>
     <string name="login">Login</string>
@@ -8,6 +8,7 @@
     <string name="email">Email</string>
     <string name="app_nameSQL">postSQL</string>
     <string name="Post">Post</string>
+    <string name="HF">Happy Food</string>
     <string name="food">Food name</string>
     <string name="address">Address</string>
     <string name="descrise">Description</string>

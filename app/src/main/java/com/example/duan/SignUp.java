@@ -62,7 +62,7 @@ public class SignUp extends AppCompatActivity {
 
                 if(!fullname.equals("") && !username.equals("") && !password.equals("") && !email.equals("")) {
                     //Start ProgressBar first (Set visibility VISIBLE)
-                    prBar.setVisibility(View.VISIBLE);
+//                    prBar.setVisibility(View.VISIBLE);
                     Handler handler = new Handler(Looper.getMainLooper());
                     handler.post(new Runnable() {
                         @Override
@@ -81,11 +81,11 @@ public class SignUp extends AppCompatActivity {
                             data[2] = username;
                             data[3] = password;
 
-                            PutData putData = new PutData("http://192.168.1.11/postPhp/signup.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.1.13/postPhp/signup.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
 
-                                    prBar.setVisibility(View.GONE);
+//                                    prBar.setVisibility(View.GONE);
                                     String result = putData.getResult();
 
                                     if(result.equals("Sign Up Success"))
